@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NaijaEarning — Demo</title>
+<style>
+:root{--green:#087f5b;--dark:#102a24;--bg:#f4f8f6;--muted:#64748b}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--dark)}
+header{background:linear-gradient(135deg,#075e46,#0b9a6b);color:white;padding:24px 18px 30px}
+nav{max-width:960px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-size:22px;font-weight:800}.pill{border:1px solid #ffffff80;border-radius:30px;padding:8px 12px;font-size:12px}
+.hero{max-width:960px;margin:28px auto 0}.hero h1{font-size:clamp(30px,6vw,48px);line-height:1.08;margin:0 0 12px}.hero p{line-height:1.6;max-width:600px;color:#e5fff4}
+.wrap{max-width:960px;margin:20px auto;padding:0 14px}.notice{background:#fff8e6;border:1px solid #f3d58a;border-radius:12px;padding:13px 15px;font-size:13px;line-height:1.5;color:#744b00}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
+.card{background:white;border:1px solid #e2e8e5;border-radius:16px;padding:18px;box-shadow:0 4px 15px #102a2408}
+.card h2,.card h3{margin:0 0 10px}.muted{color:var(--muted);font-size:14px;line-height:1.5}
+.reward{font-size:23px;font-weight:800;color:var(--green);margin:12px 0}
+button{border:0;border-radius:10px;background:var(--green);color:white;font-weight:700;padding:12px 14px;cursor:pointer;width:100%;font-size:14px}
+button.secondary{background:#e7f5ef;color:#075e46;margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}.stat{background:#f0f8f4;border-radius:12px;padding:13px}.stat small{color:var(--muted)}.stat strong{display:block;font-size:20px;margin-top:5px}
+footer{text-align:center;padding:28px 16px;color:var(--muted);font-size:12px}
+#msg{display:none;margin-top:12px;background:#e7f5ef;padding:12px;border-radius:10px;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<nav><div class="brand">🇳🇬 NaijaEarning</div><div class="pill">WEBSITE DEMO</div></nav>
+<div class="hero"><h1>Discover tasks.<br>Build useful skills.</h1><p>Explore sample surveys, app-testing ideas, writing practice and promotion tasks from one simple dashboard.</p></div>
+</header>
+<main class="wrap">
+<div class="notice"><strong>Demo only:</strong> These are sample tasks, not real paid jobs. This page does not collect payments, create accounts, or process withdrawals. Never pay an activation fee based on a promise of guaranteed earnings.</div>
+<div class="grid">
+<section class="card"><h2>Your demo wallet</h2><p class="muted">Sample balance for preview only</p><div class="stats"><div class="stat"><small>Balance</small><strong>₦0</strong></div><div class="stat"><small>Tasks done</small><strong>0</strong></div></div><button class="secondary" onclick="demo('Wallet and withdrawals are not connected in this demo.')">View wallet</button></section>
+<section class="card"><h2>Sample task categories</h2><p class="muted">Tasks should only be listed when a real advertiser or organisation has funded them and the rules are clear.</p><button onclick="demo('This demo does not submit tasks or pay rewards yet.')">How tasks work</button></section>
+</div>
+<h2 style="margin:26px 2px 10px">Explore sample tasks</h2>
+<div class="grid">
+<article class="card"><h3>📝 Survey practice</h3><p class="muted">Answer a short sample questionnaire.</p><div class="reward">₦50 <span class="muted">sample</span></div><button onclick="demo('This is a sample task only. No reward is paid.')">View task</button></article>
+<article class="card"><h3>📱 App testing idea</h3><p class="muted">Try a demo app and write feedback.</p><div class="reward">₦75 <span class="muted">sample</span></div><button onclick="demo('This is a sample task only. No reward is paid.')">View task</button></article>
+<article class="card"><h3>✍️ Simple writing</h3><p class="muted">Write a short product description.</p><div class="reward">₦90 <span class="muted">sample</span></div><button onclick="demo('This is a sample task only. No reward is paid.')">View task</button></article>
+<article class="card"><h3>📣 Promotion planning</h3><p class="muted">Draft a responsible promotional message.</p><div class="reward">₦75 <span class="muted">sample</span></div><button onclick="demo('This is a sample task only. No reward is paid.')">View task</button></article>
+</div>
+<div id="msg" role="status"></div>
+</main>
+<footer>NaijaEarning • Early design preview • No real payments or earnings enabled</footer>
+<script>
+function demo(message){const el=document.getElementById('msg');el.textContent=message;el.style.display='block';el.scrollIntoView({behavior:'smooth',block:'nearest'});}
+</script>
+</body></html>
