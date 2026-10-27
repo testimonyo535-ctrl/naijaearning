@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register - NaijaEarning</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f0f7f3;color:#173b2f}
+header{background:#087f5b;color:white;padding:20px;text-align:center;font-size:24px;font-weight:bold}
+.container{max-width:420px;margin:35px auto;padding:20px}
+.card{background:white;padding:25px;border-radius:16px;box-shadow:0 4px 20px #00000010}
+h1{text-align:center;font-size:25px}
+p{text-align:center;color:#64748b;font-size:14px;line-height:1.5}
+label{display:block;margin-top:17px;font-weight:bold;font-size:14px}
+input{width:100%;padding:13px;margin-top:7px;border:1px solid #ccd8d0;border-radius:9px;font-size:16px}
+button{width:100%;padding:14px;margin-top:22px;border:0;border-radius:9px;background:#087f5b;color:white;font-size:16px;font-weight:bold}
+.notice{background:#fff5d9;padding:12px;border-radius:9px;font-size:12px;line-height:1.5;margin-top:17px}
+a{color:#087f5b}
+</style>
+</head>
+<body>
+<header>🇳🇬 NaijaEarning</header>
+<div class="container">
+<div class="card">
+<h1>Create an Account</h1>
+<p>Fill in your details to preview the registration page.</p>
 
+<form id="registerForm">
+<label for="fullname">Full Name</label>
+<input id="fullname" type="text" placeholder="Enter your full name" required>
+
+<label for="phone">Phone Number</label>
+<input id="phone" type="tel" placeholder="Enter your phone number" required>
+
+<label for="password">Password</label>
+<input id="password" type="password" placeholder="Create a password" minlength="8" required>
+
+<button type="submit">Create Account</button>
+</form>
+
+<div id="message" role="status"></div>
+
+<div class="notice">
+<strong>Demo only:</strong> This page does not create or save accounts yet. Do not enter your real phone number or password. A secure account system must be connected before real registration can begin.
+</div>
+</div>
+</div>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit",function(event){
+event.preventDefault();
+document.getElementById("message").textContent =
+"This is a design preview. Account registration is not connected yet.";
+});
+</script>
+</body>
+</html>
