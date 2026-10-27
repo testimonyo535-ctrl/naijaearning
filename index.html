@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NaijaEarning - Website Demo</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f8f6;color:#102a24}
+header{background:linear-gradient(135deg,#075e46,#0b9a6b);color:white;padding:25px 18px}
+nav{display:flex;justify-content:space-between;align-items:center}
+.brand{font-size:23px;font-weight:bold}
+.badge{border:1px solid white;border-radius:20px;padding:7px;font-size:11px}
+.hero{margin:35px 0 10px}
+.hero h1{font-size:35px;margin-bottom:10px}
+.hero p{line-height:1.6}
+main{max-width:950px;margin:20px auto;padding:0 14px}
+.notice{background:#fff5d9;border:1px solid #eed28a;padding:14px;border-radius:12px;font-size:13px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
+.card{background:white;border:1px solid #e2e8e5;border-radius:15px;padding:18px;box-shadow:0 3px 12px #00000008}
+.card h2,.card h3{margin-top:0}
+.muted{color:#64748b;font-size:14px;line-height:1.6}
+.reward{font-size:23px;font-weight:bold;color:#087f5b;margin:12px 0}
+button{width:100%;padding:12px;border:0;border-radius:9px;background:#087f5b;color:white;font-weight:bold;margin-top:8px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat{background:#edf8f2;padding:12px;border-radius:10px}
+footer{text-align:center;padding:25px;color:#64748b;font-size:12px}
+#message{display:none;background:#e7f5ef;padding:12px;border-radius:10px;margin-top:15px}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="brand">🇳🇬 NaijaEarning</div>
+<div class="badge">WEBSITE DEMO</div>
+</nav>
+<div class="hero">
+<h1>Discover tasks.<br>Build useful skills.</h1>
+<p>Explore online task ideas, practise useful skills, and discover new opportunities.</p>
+</div>
+</header>
 
+<main>
+<div class="notice">
+<strong>Important:</strong> This is a demonstration website.
+Tasks and rewards shown here are examples only.
+There are no real accounts, payments, or withdrawals.
+Never pay money based on promises of guaranteed earnings.
+</div>
+
+<div class="grid">
+<section class="card">
+<h2>💰 Demo Wallet</h2>
+<p class="muted">Your sample account summary</p>
+<div class="stats">
+<div class="stat">Balance<br><strong>₦0</strong></div>
+<div class="stat">Tasks done<br><strong>0</strong></div>
+</div>
+<button onclick="showMessage('Wallet is only a demonstration.')">View Wallet</button>
+</section>
+
+<section class="card">
+<h2>📋 Task Categories</h2>
+<p class="muted">Explore survey practice, app testing, writing, and promotional task ideas.</p>
+<button onclick="showMessage('Real tasks must be verified and funded before launch.')">How Tasks Work</button>
+</section>
+</div>
+
+<h2>Explore Sample Tasks</h2>
+<div class="grid">
+<article class="card">
+<h3>📝 Survey Practice</h3>
+<p class="muted">Practise answering a short questionnaire.</p>
+<div class="reward">₦50 <small>sample</small></div>
+<button onclick="showMessage('Demo only. No payment is available.')">View Task</button>
+</article>
+
+<article class="card">
+<h3>📱 App Testing</h3>
+<p class="muted">Learn how to test an app and write feedback.</p>
+<div class="reward">₦75 <small>sample</small></div>
+<button onclick="showMessage('Demo only. No payment is available.')">View Task</button>
+</article>
+
+<article class="card">
+<h3>✍️ Simple Writing</h3>
+<p class="muted">Practise writing a product description.</p>
+<div class="reward">₦90 <small>sample</small></div>
+<button onclick="showMessage('Demo only. No payment is available.')">View Task</button>
+</article>
+
+<article class="card">
+<h3>📣 Promotions</h3>
+<p class="muted">Explore responsible promotional activities.</p>
+<div class="reward">₦75 <small>sample</small></div>
+<button onclick="showMessage('Demo only. No payment is available.')">View Task</button>
+</article>
+</div>
+
+<div id="message"></div>
+</main>
+
+<footer>
+NaijaEarning • Website Design Preview
+</footer>
+
+<script>
+function showMessage(text){
+const box=document.getElementById('message');
+box.textContent=text;
+box.style.display='block';
+}
+</script>
+</body>
+  </html>
