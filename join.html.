@@ -1,1 +1,43 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join NaijaEarning</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f7f3;
+  text-align: center;
+  padding: 30px 15px;
+  color: #173b2f;
+}
+.card {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+}
+a {
+  display: block;
+  background: #087f5b;
+  color: white;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>🇳🇬 NaijaEarning</h1>
+  <h2>Welcome!</h2>
+  <p>This is the NaijaEarning demo website.</p>
+  <a href="register.html">Create Account</a>
+  <a href="index.html">Back to Homepage</a>
+  <p><small>Demo only. Registration does not save accounts yet.</small></p>
+</div>
+</body>
+</html>
