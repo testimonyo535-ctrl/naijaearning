@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NaijaEarning Tasks</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f7f3;
+  color: #173b2f;
+  margin: 0;
+}
+header {
+  background: #087f5b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+button, .link {
+  background: #087f5b;
+  color: white;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+.balance {
+  font-size: 25px;
+  font-weight: bold;
+}
+.notice {
+  font-size: 13px;
+  color: #8a4b08;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🇳🇬 NaijaEarning</h1>
+<p>Demo Task Centre</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>My Demo Wallet</h2>
+<p class="balance">₦<span id="balance">0</span></p>
+<p>Completed tasks: <span id="completed">0</span></p>
+</div>
+
+<div class="card">
+<h3>📋 Survey Practice</h3>
+<p>Reward: ₦50 (demo)</p>
+<button onclick="completeTask(this, 50)">Complete Demo Task</button>
+</div>
+
+<div class="card">
+<h3>📱 App Testing Practice</h3>
+<p>Reward: ₦75 (demo)</p>
+<button onclick="completeTask(this, 75)">Complete Demo Task</button>
+</div>
+
+<div class="card">
+<h3>✍️ Writing Practice</h3>
+<p>Reward: ₦100 (demo)</p>
+<button onclick="completeTask(this, 100)">Complete Demo Task</button>
+</div>
+
+<div class="card">
+<p class="notice">
+<strong>Important:</strong> This is only a demonstration. No real tasks, earnings, accounts or withdrawals are available. The demo balance is not money.
+</p>
+<a class="link" href="home.html">Back to Home</a>
+</div>
+
+</div>
+
+<script>
+let balance = 0;
+let completed = 0;
+
+function completeTask(button, reward) {
+  if (button.disabled) return;
+
+  balance += reward;
+  completed++;
+
+  document.getElementById("balance").textContent = balance;
+  document.getElementById("completed").textContent = completed;
+
+  button.textContent = "Demo Completed ✓";
+  button.disabled = true;
+  button.style.opacity = "0.6";
+}
+</script>
+
+</body>
+</html>
