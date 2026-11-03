@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login - NaijaEarning</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f7f3;
+  color: #173b2f;
+  padding: 30px 15px;
+}
+.card {
+  max-width: 400px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+}
+h1, p { text-align: center; }
+label {
+  display: block;
+  margin-top: 18px;
+  font-weight: bold;
+}
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  margin-top: 7px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+button, a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  margin-top: 20px;
+  background: #087f5b;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.notice {
+  background: #fff5d9;
+  padding: 12px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h1>🇳🇬 NaijaEarning</h1>
+<h2>Welcome Back!</h2>
+<p>Login to your account</p>
+
+<form id="loginForm">
+<label>Phone Number</label>
+<input type="tel" placeholder="Enter phone number" required>
+
+<label>Password</label>
+<input type="password" placeholder="Enter password" required>
+
+<button type="submit">Login</button>
+</form>
+
+<p id="message"></p>
+
+<div class="notice">
+<strong>Demo only:</strong> Login is not connected to a real account system. Do not enter real personal information or passwords.
+</div>
+
+<a href="register.html">Create an Account</a>
+<a href="index.html">Back to Homepage</a>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  document.getElementById("message").textContent =
+  "This is a demo. Login is not connected yet.";
+});
+</script>
+
+</body>
+  </html>
